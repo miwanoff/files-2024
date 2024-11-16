@@ -34,15 +34,24 @@ $filename = 'text.txt';
 // }
 
 $file = fopen($filename, "r");
-$arr=[];
- //Выводит строки файла до тех пор, пока не будет достигнут конец файла 
-while(!feof($file)) 
-{ 
-    $arr[]= "<h2>".fgets($file)."</h2>"; 
+$arr = [];
+//Выводит строки файла до тех пор, пока не будет достигнут конец файла
+while (!feof($file)) {
+    $arr[] = "<h2>" . fgets($file) . "</h2>";
 }
 
 print_r($arr);
 
-$arr1 = file($filename); 
+$arr1 = file($filename);
 
 print_r($arr1);
+
+echo getcwd();
+echo "\n";
+echo realpath("/");
+echo "\n";
+$name = "my_path";
+if (!is_dir($name)) {
+    mkdir($name); // создание каталога по указанному пути
+}
+echo realpath($name); // реальный путь к созданному каталогу

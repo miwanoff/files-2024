@@ -1,5 +1,8 @@
 <?php
-
+$path = "poems";
+if (!is_dir($path)) {
+    mkdir($path);
+}
 $str_b = '<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,7 @@ $arr = file("poem.txt");
 
 $content = "<h1>Poem</h1>";
 
-$h = fopen("poem.html", "w");
+$h = fopen($path."/poem.html", "w");
 
 fwrite($h, $str_b);
 fwrite($h, $content);
