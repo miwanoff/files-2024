@@ -38,7 +38,11 @@ $arr=[];
  //Выводит строки файла до тех пор, пока не будет достигнут конец файла 
 while(!feof($file)) 
 { 
-    $arr[]= fgets($file); 
+    $arr[]= "<h2>".fgets($file)."</h2>"; 
 }
 
 print_r($arr);
+
+$arr1 = file($filename); 
+
+print_r($arr1);
