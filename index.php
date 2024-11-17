@@ -28,7 +28,7 @@ $filename = 'text.txt';
 //         exit;
 //     }
 //     echo "Текст \"" . $somecontent . "\"был записан в файл $filename";
-//     fclose($handle);
+//     fc$data = file_get_contents("poem.txt"); lose($handle);
 // } else {
 //     echo "Файл $filename недоступен для записи";
 // }
@@ -54,4 +54,21 @@ $name = "my_path";
 if (!is_dir($name)) {
     mkdir($name); // создание каталога по указанному пути
 }
-echo realpath($name); // реальный путь к созданному каталогу
+//echo realpath($name); // реальный путь к созданному каталогу
+
+// $n = readfile ("https://www.example.com");
+//  if (!$n) 
+//     echo "Ошибка чтения из файла"; // если ошибка была, то выводим сообщение
+//  else 
+//     echo $n; // если ошибки не было, то выводим число считанных символовfile_get_contents
+// $f = file_get_contents("https://www.example.com");
+// echo $f;
+
+$data = file_get_contents("https://www.example.com"); 
+echo $data;
+//file_put_contents("newexample.html", $data);
+
+// $orig_filename = "poem.txt";
+// $new_filename = "myNewfile.txt";
+// $status = copy($orig_filename, $new_filename) or die("Невозможно скопировать файл");
+// echo "Содержимое файла успешно скопировано!";
